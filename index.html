@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МеталлТрубПром - продажа труб и металлопроката</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение кастомных стилей -->
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Шапка сайта -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Верхняя панель с контактами (во всю ширину) -->
+    <div class="bg-blue-900 text-white py-2 hidden md:block w-full">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex space-x-6">
+                <div class="flex items-center">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>+7 (927) 775-57-22</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>info@metalltrubprom.ru</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>г. Москва, ул. Металлургов, 15</span>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://t.me/mix931_sites" class="hover:text-blue-200"><i class="fab fa-whatsapp text-xl"></i></a>
+                <a href="https://t.me/mix931_sites" class="hover:text-blue-200"><i class="fab fa-telegram text-xl"></i></a>
+                <a href="https://t.me/mix931_sites" class="hover:text-blue-200"><i class="fab fa-vk text-xl"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основное меню -->
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
+        <!-- Логотип -->
+        <div class="flex items-center">
+            <div class="bg-blue-700 text-white p-2 rounded mr-3">
+                <i class="fas fa-industry text-2xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-blue-900">МеталлТрубПром</h1>
+                <p class="text-xs text-gray-600">Продажа труб и металлопроката</p>
+            </div>
+        </div>
+
+        <!-- Основное меню для десктопа -->
+        <nav class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="text-blue-900 font-medium hover:text-blue-700">Главная</a>
+
+            <!-- Выпадающее меню "Продукция" -->
+            <div class="relative group">
+                <button class="text-blue-900 font-medium hover:text-blue-700 flex items-center focus:outline-none">
+                    Продукция <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 rounded shadow-lg bg-white py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 1/4</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 3/8</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 1/2</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 5/8</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 3/4</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Метрические трубы</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Вспомогательные материалы</a>
+                </div>
+            </div>
+
+            <a href="index.html#montage" class="text-blue-900 font-medium hover:text-blue-700">О монтаже</a>
+            <a href="index.html#certificates" class="text-blue-900 font-medium hover:text-blue-700">Сертификаты</a>
+            <a href="politika-konfidentsialnosti.html" class="text-blue-900 font-medium hover:text-blue-700">Политика конфиденциальности</a>
+            <a href="index.html#contacts" class="text-blue-900 font-medium hover:text-blue-700">Контакты</a>
+
+            <!-- Выпадающее меню "Ещё" -->
+            <div class="relative group">
+                <button class="text-blue-900 font-medium hover:text-blue-700 flex items-center focus:outline-none">
+                    Ещё <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 rounded shadow-lg bg-white py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="polzovatelskoe-soglashenie.html" class="block px-4 py-2 hover:bg-blue-50">Пользовательское соглашение</a>
+                    <a href="index.html#reviews" class="block px-4 py-2 hover:bg-blue-50">Отзывы</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Кнопки для мобильного меню -->
+        <div class="flex items-center space-x-4 md:hidden">
+            <button id="mobile-menu-button" class="text-blue-900">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-lg absolute w-full left-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <a href="#" class="block py-2 border-b border-gray-200">Главная</a>
+
+            <div class="py-2 border-b border-gray-200">
+                <button id="mobile-products-btn" class="w-full flex justify-between items-center">
+                    <span>Продукция</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="mobile-products-menu" class="hidden pl-4 mt-2">
+                    <a href="index.html#catalog" class="block py-2">Трубы D 1/4</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 3/8</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 1/2</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 5/8</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 3/4</a>
+                    <a href="index.html#catalog" class="block py-2">Метрические трубы</a>
+                    <a href="index.html#catalog" class="block py-2">Вспомогательные материалы</a>
+                </div>
+            </div>
+
+            <a href="index.html#montage" class="block py-2 border-b border-gray-200">О монтаже</a>
+            <a href="index.html#certificates" class="block py-2 border-b border-gray-200">Сертификаты</a>
+            <a href="politika-konfidentsialnosti.html" class="block py-2 border-b border-gray-200">Политика конфиденциальности</a>
+
+            <div class="py-2 border-b border-gray-200">
+                <button id="mobile-more-btn" class="w-full flex justify-between items-center">
+                    <span>Ещё</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="mobile-more-menu" class="hidden pl-4 mt-2">
+                    <a href="polzovatelskoe-soglashenie.html" class="block py-2">Пользовательское соглашение</a>
+                    <a href="index.html#reviews" class="block py-2">Отзывы</a>
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://t.me/mix931_sites" class="bg-blue-700 text-white p-2 rounded-full"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://t.me/mix931_sites" class="bg-blue-500 text-white p-2 rounded-full"><i class="fab fa-telegram"></i></a>
+                <a href="tel:+79277755722" class="bg-green-600 text-white p-2 rounded-full"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Главный контент -->
+    <main>
+        <!-- Слайдер/баннер -->
+        <section class="relative">
+            <div class="slider relative h-auto min-h-[320px]">
+                <!-- Слайд 1 -->
+                    <div class="slide absolute inset-0 w-full transition-opacity duration-700 opacity-100 z-10">
+                        <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 md:py-24 h-full flex items-center">
+                            <div class="container mx-auto px-4">
+                                <div class="max-w-2xl">
+                                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Качественные трубы и металлопрокат</h2>
+                                    <p class="text-lg mb-6">Широкий ассортимент труб различного диаметра и назначения. Гарантия качества и лучшие цены на рынке.</p>
+                                    <div class="flex flex-wrap gap-4">
+                                        <a href="index.html#catalog" class="bg-white text-blue-900 px-6 py-3 rounded font-medium hover:bg-gray-100 transition block text-center">
+                                            Каталог продукции
+                                        </a>
+                                        <a href="index.html#contacts" class="border-2 border-white text-white px-6 py-3 rounded font-medium hover:bg-white hover:text-blue-900 transition block text-center">
+                                            Получить консультацию
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Слайд 2 -->
+                <div class="slide absolute inset-0 w-full transition-opacity duration-700 opacity-0 z-0">
+                    <div class="bg-gradient-to-r from-gray-800 to-gray-600 text-white py-16 md:py-24 h-full flex items-center">
+                        <div class="container mx-auto px-4">
+                            <div class="max-w-2xl">
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">Профессиональный монтаж трубопроводов</h2>
+                                <p class="text-lg mb-6">Комплексные решения по монтажу трубопроводных систем любой сложности.</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="index.html#montage" class="bg-white text-gray-900 px-6 py-3 rounded font-medium hover:bg-gray-100 transition block text-center">
+                                        Узнать подробнее
+                                    </a>
+                                    <a href="#" onclick="openOrderPopup(); return false;" class="border-2 border-white text-white px-6 py-3 rounded font-medium hover:bg-white hover:text-gray-900 transition block text-center">
+                                        Заказать монтаж
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Точки-переключатели -->
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 slider-dots z-20">
+                <button class="w-3 h-3 rounded-full bg-white opacity-100 transition"></button>
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition"></button>
+            </div>
+        </section>
+
+        <!-- О компании -->
+        <section id="about_us" class="py-12 bg-white scroll-mt-[110px]">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h2 class="text-3xl font-bold text-blue-900 mb-6">О компании</h2>
+                        <p class="text-lg mb-4">Компания "МеталлТрубПром" более 15 лет успешно работает на рынке металлопроката, предлагая широкий ассортимент труб различного диаметра и назначения.</p>
+                        <p class="text-lg mb-6">Мы сотрудничаем с ведущими производителями металлопроката, что позволяет нам гарантировать высокое качество продукции и конкурентные цены.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center bg-blue-50 px-4 py-2 rounded">
+                                <i class="fas fa-check-circle text-blue-700 mr-2"></i>
+                                <span>Гарантия качества</span>
+                            </div>
+                            <div class="flex items-center bg-blue-50 px-4 py-2 rounded">
+                                <i class="fas fa-truck text-blue-700 mr-2"></i>
+                                <span>Быстрая доставка</span>
+                            </div>
+                            <div class="flex items-center bg-blue-50 px-4 py-2 rounded">
+                                <i class="fas fa-percentage text-blue-700 mr-2"></i>
+                                <span>Гибкие условия</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-200 h-48 rounded-lg overflow-hidden">
+                                <img src="images/company1.jpg" alt="Поток заказов" class="w-full h-full object-cover">
+                            </div>
+                            <div class="bg-gray-200 h-48 rounded-lg overflow-hidden">
+                                <img src="images/company2.jpg" alt="Офис" class="w-full h-full object-cover">
+                            </div>
+                            <div class="bg-gray-200 h-48 rounded-lg overflow-hidden">
+                                <img src="images/company3.jpg" alt="Один из кейсов" class="w-full h-full object-cover">
+                            </div>
+                            <div class="bg-gray-200 h-48 rounded-lg overflow-hidden">
+                                <img src="images/company4.jpg" alt="Производство" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Каталог продукции -->
+            <section id="catalog" class="py-12 bg-gray-50 scroll-mt-[110px]">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Каталог продукции</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Карточка товара 1 -->
+                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="bg-gray-200 h-48">
+                                <img src="images/d14.jpg" alt="Труба D 1/4" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Труба D 1/4"</h3>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    <p><span class="font-medium">Внешний диаметр:</span> 6,35 мм</p>
+                                    <p><span class="font-medium">Толщина стенки:</span> 1 мм</p>
+                                    <p><span class="font-medium">Давление разрыва:</span> 360 bar</p>
+                                    <p><span class="font-medium">Рабочее давление:</span> 90 bar</p>
+                                </div>
+                                <div class="flex justify-center mt-4"> 
+                                    <button onclick="openPopup('d14')" class="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-600">Комплектации</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 2 -->
+                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="bg-gray-200 h-48">
+                                <img src="images/d38.jpg" alt="Труба D 3/8" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Труба D 3/8"</h3>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    <p><span class="font-medium">Внешний диаметр:</span> 9,52 мм</p>
+                                    <p><span class="font-medium">Толщина стенки:</span> 1,2 мм</p>
+                                    <p><span class="font-medium">Давление разрыва:</span> 240 bar</p>
+                                    <p><span class="font-medium">Рабочее давление:</span> 60 bar</p>
+                                </div>
+                                <div class="flex justify-center mt-4">
+                                    <button onclick="openPopup('d38')" class="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-600">Комплектации</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 3 -->
+                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="bg-gray-200 h-48">
+                                <img src="images/d12.jpg" alt="Труба D 1/2" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Труба D 1/2"</h3>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    <p><span class="font-medium">Внешний диаметр:</span> 12,7 мм</p>
+                                    <p><span class="font-medium">Толщина стенки:</span> 1,2 мм</p>
+                                    <p><span class="font-medium">Давление разрыва:</span> 215 bar</p>
+                                    <p><span class="font-medium">Рабочее давление:</span> 54 bar</p>
+                                </div>
+                                <div class="flex justify-center mt-4">
+                                    <button onclick="openPopup('d12')" class="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-600">Комплектации</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 4 -->
+                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="bg-gray-200 h-48">
+                                <img src="images/d58.jpg" alt="Труба D 5/8" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Труба D 5/8"</h3>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    <p><span class="font-medium">Внешний диаметр:</span> 15,87 мм</p>
+                                    <p><span class="font-medium">Толщина стенки:</span> 1,5 мм</p>
+                                    <p><span class="font-medium">Давление разрыва:</span> 215 bar</p>
+                                    <p><span class="font-medium">Рабочее давление:</span> 54 bar</p>
+                                </div>
+                                <div class="flex justify-center mt-4">
+                                    <button onclick="openPopup('d58')" class="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-600">Комплектации</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 5 -->
+                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="bg-gray-200 h-48">
+                                <img src="images/d34.jpg" alt="Труба D 3/4" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Труба D 3/4"</h3>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    <p><span class="font-medium">Внешний диаметр:</span> 19,05 мм</p>
+                                    <p><span class="font-medium">Толщина стенки:</span> 1,5 мм</p>
+                                    <p><span class="font-medium">Давление разрыва:</span> 215 bar</p>
+                                    <p><span class="font-medium">Рабочее давление:</span> 54 bar</p>
+                                </div>
+                                <div class="flex justify-center mt-4">
+                                    <button onclick="openPopup('d34')" class="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-600">Комплектации</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 6 -->
+                        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="bg-gray-200 h-48">
+                                <img src="images/trubametr.jpg" alt="Труба метрического диаметра" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-lg font-semibold mb-2">Труба метрического диаметра</h3>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    <p><span class="font-medium">Внешний диаметр:</span> 6,35 мм</p>
+                                    <p><span class="font-medium">Толщина стенки:</span> 1 мм</p>
+                                    <p><span class="font-medium">Давление разрыва:</span> 360 bar</p>
+                                    <p><span class="font-medium">Рабочее давление:</span> 90 bar</p>
+                                </div>
+                                <div class="flex justify-center mt-4">
+                                    <button onclick="openPopup('trubametr')" class="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-600">Комплектации</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка товара 7 -->
+                            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 flex flex-col">
+                                <div class="bg-gray-200 h-48">
+                                    <img src="images/anaerobgel.jpg" alt="Анаэробный гель" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 flex flex-col flex-1 justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Анаэробный гель</h3>
+                                        <div class="text-sm text-gray-600 mb-4">
+                                            <p><span class="font-medium">Описание:</span> Анаэробный клей-герметик предназначен для надежной фиксации метрической и трубной резьбы, испытывающей высокие вибрационные нагрузки и коррозионное воздействие внешней среды</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-center mt-4">
+                                        <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                                            165&nbsp;₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Карточка товара 8 -->
+                            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 flex flex-col">
+                                <div class="bg-gray-200 h-48">
+                                    <img src="images/pripoi.jpg" alt="Припой под алюминий с флюсом" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 flex flex-col flex-1 justify-between">
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Припой под алюминий с флюсом</h3>
+                                        <div class="text-sm text-gray-600 mb-4">
+                                            <p><span class="font-medium">Длина прутков:</span> 500 мм</p>
+                                            <p><span class="font-medium">Состав:</span> Al-2%, Zn-98%</p>
+                                            <p><span class="font-medium">Температура плавления:</span> 380-430 градусов</p>
+                                            <p><span class="font-medium">Применение:</span> Цинковый припой для мягкой пайки алюминия и его сплавов, соединения алюминия с медью</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-center items-end mt-auto">
+                                        <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                                            165&nbsp;₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+            <!-- Модальные окна комплектаций -->
+                <!-- D 1/4 -->
+                <div id="modal-d14" data-modal-bg="true" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-xl w-full border-2 border-blue-100 relative">
+                    <button onclick="closePopup('d14')" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+                    <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Комплектации</h2>
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full text-center border border-blue-200 mb-6">
+                        <thead>
+                        <tr class="bg-blue-50 text-blue-900 font-semibold">
+                            <th class="px-4 py-2 border-b">Название</th>
+                            <th class="px-4 py-2 border-b">Метраж</th>
+                            <th class="px-4 py-2 border-b">Вес</th>
+                            <th class="px-4 py-2 border-b">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 1/4</td>
+                            <td class="px-4 py-2">15 м</td>
+                            <td class="px-4 py-2">0,72 кг</td>
+                            <td class="px-4 py-2">от 504 руб</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 1/4</td>
+                            <td class="px-4 py-2">30 м</td>
+                            <td class="px-4 py-2">1,44 кг</td>
+                            <td class="px-4 py-2">от 1008 руб</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Труба D 1/4</td>
+                            <td class="px-4 py-2">50 м</td>
+                            <td class="px-4 py-2">2,4 кг</td>
+                            <td class="px-4 py-2">от 1680 руб</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="flex justify-center">
+                    <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                        Цена: от 33,6 руб/м
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- D 3/8 -->
+                <div id="modal-d38" data-modal-bg="true" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-xl w-full border-2 border-blue-100 relative">
+                    <button onclick="closePopup('d38')" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+                    <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Комплектации</h2>
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full text-center border border-blue-200 mb-6">
+                        <thead>
+                        <tr class="bg-blue-50 text-blue-900 font-semibold">
+                            <th class="px-4 py-2 border-b">Название</th>
+                            <th class="px-4 py-2 border-b">Метраж</th>
+                            <th class="px-4 py-2 border-b">Вес</th>
+                            <th class="px-4 py-2 border-b">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 3/8</td>
+                            <td class="px-4 py-2">15 м</td>
+                            <td class="px-4 py-2">1,35 кг</td>
+                            <td class="px-4 py-2">от 945 руб</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 3/8</td>
+                            <td class="px-4 py-2">30 м</td>
+                            <td class="px-4 py-2">2,7 кг</td>
+                            <td class="px-4 py-2">от 1890 руб</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Труба D 3/8</td>
+                            <td class="px-4 py-2">50 м</td>
+                            <td class="px-4 py-2">4,5 кг</td>
+                            <td class="px-4 py-2">от 3150 руб</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="flex justify-center">
+                    <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                        Цена: от 63 руб/м
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- D 1/2 -->
+                <div id="modal-d12" data-modal-bg="true" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-xl w-full border-2 border-blue-100 relative">
+                    <button onclick="closePopup('d12')" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+                    <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Комплектации</h2>
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full text-center border border-blue-200 mb-6">
+                        <thead>
+                        <tr class="bg-blue-50 text-blue-900 font-semibold">
+                            <th class="px-4 py-2 border-b">Название</th>
+                            <th class="px-4 py-2 border-b">Метраж</th>
+                            <th class="px-4 py-2 border-b">Вес</th>
+                            <th class="px-4 py-2 border-b">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 1/2</td>
+                            <td class="px-4 py-2">15 м</td>
+                            <td class="px-4 py-2">1,85 кг</td>
+                            <td class="px-4 py-2">от 1292 руб</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 1/2</td>
+                            <td class="px-4 py-2">30 м</td>
+                            <td class="px-4 py-2">3,7 кг</td>
+                            <td class="px-4 py-2">от 2585 руб</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Труба D 1/2</td>
+                            <td class="px-4 py-2">50 м</td>
+                            <td class="px-4 py-2">6,15 кг</td>
+                            <td class="px-4 py-2">от 4305 руб</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="flex justify-center">
+                    <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                        Цена: от 86,1 руб/м
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- D 5/8 -->
+                <div id="modal-d58" data-modal-bg="true" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-xl w-full border-2 border-blue-100 relative">
+                    <button onclick="closePopup('d58')" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+                    <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Комплектации</h2>
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full text-center border border-blue-200 mb-6">
+                        <thead>
+                        <tr class="bg-blue-50 text-blue-900 font-semibold">
+                            <th class="px-4 py-2 border-b">Название</th>
+                            <th class="px-4 py-2 border-b">Метраж</th>
+                            <th class="px-4 py-2 border-b">Вес</th>
+                            <th class="px-4 py-2 border-b">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 5/8</td>
+                            <td class="px-4 py-2">15 м</td>
+                            <td class="px-4 py-2">3,08 кг</td>
+                            <td class="px-4 py-2">от 2307 руб</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 5/8</td>
+                            <td class="px-4 py-2">30 м</td>
+                            <td class="px-4 py-2">6,15 кг</td>
+                            <td class="px-4 py-2">от 4614 руб</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Труба D 5/8</td>
+                            <td class="px-4 py-2">50 м</td>
+                            <td class="px-4 py-2">10,25 кг</td>
+                            <td class="px-4 py-2">от 7690 руб</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="flex justify-center">
+                    <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                        Цена: от 153,8 руб/м
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- D 3/4 -->
+                <div id="modal-d34" data-modal-bg="true" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-xl w-full border-2 border-blue-100 relative">
+                    <button onclick="closePopup('d34')" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+                    <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Комплектации</h2>
+                    <div class="overflow-x-auto">
+                    <table class="min-w-full text-center border border-blue-200 mb-6">
+                        <thead>
+                        <tr class="bg-blue-50 text-blue-900 font-semibold">
+                            <th class="px-4 py-2 border-b">Название</th>
+                            <th class="px-4 py-2 border-b">Метраж</th>
+                            <th class="px-4 py-2 border-b">Вес</th>
+                            <th class="px-4 py-2 border-b">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 3/4</td>
+                            <td class="px-4 py-2">15 м</td>
+                            <td class="px-4 py-2">3,55 кг</td>
+                            <td class="px-4 py-2">от 2667 руб</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="px-4 py-2">Труба D 3/4</td>
+                            <td class="px-4 py-2">30 м</td>
+                            <td class="px-4 py-2">7,1 кг</td>
+                            <td class="px-4 py-2">от 5334 руб</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">Труба D 3/4</td>
+                            <td class="px-4 py-2">50 м</td>
+                            <td class="px-4 py-2">11,85 кг</td>
+                            <td class="px-4 py-2">от 8890 руб</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="flex justify-center">
+                    <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                        Цена: от 177,8 руб/м
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Труба метрического диаметра -->
+                    <div id="modal-trubametr" data-modal-bg="true" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+                        <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 max-w-xl w-full border-2 border-blue-100 relative">
+                            <button onclick="closePopup('trubametr')" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+                            <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Комплектации</h2>
+                            <div class="mb-6 text-gray-800 text-lg">
+                                Изготовление бухт метрического диаметра: <b>от 6 мм до 20 мм</b> и весом <b>от 50 до 90 кг</b>.
+                            </div>
+                            <div class="flex justify-center">
+                                <div class="bg-blue-100 text-blue-900 px-6 py-2 rounded-full font-semibold border-2 border-blue-300 text-base shadow">
+                                    Цена: от 33,6 руб/м
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+        <!-- Услуги монтажа -->
+        <section id="montage" class="py-12 bg-white scroll-mt-[110px]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Услуги монтажа</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Профессиональный монтаж трубопроводов</h3>
+                        <p class="text-lg mb-6">Наша компания предлагает полный комплекс услуг по монтажу трубопроводных систем любой сложности. Мы работаем с различными типами труб и материалами.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check-circle text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Проектирование</h4>
+                                    <p class="text-gray-600 text-sm">Разработка оптимальной схемы трубопровода с учетом всех требований</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check-circle text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Подбор материалов</h4>
+                                    <p class="text-gray-600 text-sm">Рекомендации по выбору труб и комплектующих</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check-circle text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Монтажные работы</h4>
+                                    <p class="text-gray-600 text-sm">Качественная установка трубопроводной системы</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check-circle text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Пусконаладка</h4>
+                                    <p class="text-gray-600 text-sm">Тестирование системы и ввод в эксплуатацию</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="mt-6 bg-blue-700 text-white px-6 py-3 rounded font-medium hover:bg-blue-800 transition">
+                            Заказать монтаж
+                        </button>
+                    </div>
+                    
+                    <div class="bg-gray-200 rounded-lg overflow-hidden h-96">
+                        <img src="images/montage.jpg" alt="Монтаж труб" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Доставка и оплата -->
+        <section id="delivery" class="py-12 bg-gray-50 scroll-mt-[110px]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Доставка и оплата</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                            <i class="fas fa-truck text-blue-700 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Доставка</h3>
+                        <p class="text-gray-600 mb-4">Мы осуществляем доставку труб и металлопроката по Москве и Московской области собственным транспортом.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Доставка в день заказа</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Грузчики для разгрузки</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Аккуратная транспортировка</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                            <i class="fas fa-credit-card text-blue-700 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Оплата</h3>
+                        <p class="text-gray-600 mb-4">Мы предлагаем различные способы оплаты для вашего удобства.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Наличный расчет</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Безналичный расчет</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Оплата картой</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Рассрочка</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                            <i class="fas fa-map-marked-alt text-blue-700 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Самовывоз</h3>
+                        <p class="text-gray-600 mb-4">Вы можете самостоятельно забрать товар с нашего склада в удобное для вас время.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Круглосуточный доступ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Погрузочная техника</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-700 mr-2 mt-1"></i>
+                                <span>Консультация специалиста</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Здесь карта зоны доставки -->
+                <div class="mt-12 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Зона доставки</h3>
+                    <div class="bg-gray-200 h-64 rounded-lg overflow-hidden flex items-center justify-center">
+                        <iframe 
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4aa95e5529233105c588b00ba2e4d344c52ec683efcfefdc77cfca15a3187503&amp;source=constructor" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="min-height:256px; border:0; display:block;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сертификаты -->
+            <section id="certificates" class="py-12 bg-white scroll-mt-[110px]">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Сертификаты и лицензии</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-gray-200 h-48 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openCertModal('images/cert.jpg')">
+                            <img src="images/cert.jpg" alt="Сертификат 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-gray-200 h-48 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openCertModal('images/cert.jpg')">
+                            <img src="images/cert.jpg" alt="Сертификат 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-gray-200 h-48 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openCertModal('images/cert.jpg')">
+                            <img src="images/cert.jpg" alt="Сертификат 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-gray-200 h-48 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition" onclick="openCertModal('images/cert.jpg')">
+                            <img src="images/cert.jpg" alt="Сертификат 4" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button class="bg-blue-700 text-white px-6 py-3 rounded font-medium hover:bg-blue-800 transition">
+                            Посмотреть все сертификаты
+                        </button>
+                    </div>
+                </div>
+                <!-- Модалка для просмотра сертификата -->
+                <div id="certModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden" onclick="closeCertModal(event)">
+                    <div class="relative max-w-3xl w-full p-4">
+                        <img id="certModalImg" src="" alt="Сертификат" class="rounded-xl shadow-lg max-h-[80vh] mx-auto border-4 border-white">
+                        <button onclick="closeCertModal(event)" class="absolute top-3 right-3 bg-white text-blue-700 rounded-full text-2xl w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100">&times;</button>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Отзывы -->
+        <section id="reviews" class="py-12 bg-gray-50 scroll-mt-[110px]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Отзывы наших клиентов</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клиент" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Иван Петров</h4>
+                                <p class="text-sm text-gray-600">ООО "СтройТех"</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Заказывали трубы для строительства торгового центра. Качество продукции на высоте, доставка точно в срок. Рекомендую!"</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клиент" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Елена Смирнова</h4>
+                                <p class="text-sm text-gray-600">ООО "МеталлСервис"</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Работаем с компанией уже несколько лет. Всегда находят решение даже для сложных задач. Отличные цены и сервис."</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gray-200 w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Клиент" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Алексей Козлов</h4>
+                                <p class="text-sm text-gray-600">ИП Козлов А.В.</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Заказал трубы для водопровода на дачу. Помогли с выбором, привезли прямо на участок. Качество отличное, цена адекватная."</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <button class="bg-blue-700 text-white px-6 py-3 rounded font-medium hover:bg-blue-800 transition">
+                        Оставить отзыв
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Партнеры -->
+        <section id="partners" class="py-12 bg-white scroll-mt-[110px]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Наши партнеры</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-24">
+                        <img src="images/centek.png" alt="Партнер 1" class="max-h-12">
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-24">
+                        <img src="images/electrolux.png" alt="Партнер 2" class="max-h-12">
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-24">
+                        <img src="images/hisense.jpg" alt="Партнер 3" class="max-h-12">
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-24">
+                        <img src="images/lg.png" alt="Партнер 4" class="max-h-12">
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-24">
+                        <img src="images/midea.png" alt="Партнер 5" class="max-h-12">
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-24">
+                        <img src="images/TCL.png" alt="Партнер 6" class="max-h-12">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Форма обратной связи -->
+        <section class="py-12 bg-blue-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-2">Остались вопросы?</h2>
+                    <p class="text-center text-blue-200 mb-8">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
+                    
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block mb-1">Ваше имя</label>
+                            <input type="text" class="w-full px-4 py-2 rounded text-gray-900" placeholder="Иван Иванов" required>
+                        </div>
+                        <div>
+                            <label class="block mb-1">Телефон</label>
+                            <input type="tel" class="w-full px-4 py-2 rounded text-gray-900" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <div>
+                            <label class="block mb-1">Email</label>
+                            <input type="email" class="w-full px-4 py-2 rounded text-gray-900" placeholder="example@mail.ru">
+                        </div>
+                        <div>
+                            <label class="block mb-1">Тема</label>
+                            <select class="w-full px-4 py-2 rounded text-gray-900">
+                                <option>Выберите тему</option>
+                                <option>Консультация по продукции</option>
+                                <option>Запрос цены</option>
+                                <option>Заказ монтажа</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block mb-1">Сообщение</label>
+                            <textarea class="w-full px-4 py-2 rounded text-gray-900 h-24" placeholder="Ваше сообщение..."></textarea>
+                        </div>
+                        <div class="md:col-span-2 flex items-center">
+                            <input type="checkbox" id="agree" class="mr-2" required> 
+                            <label for="agree">
+                                Я согласен с 
+                                <a href="conf.html" target="_blank" class="text-blue-700 underline hover:text-blue-900 transition">
+                                    политикой конфиденциальности
+                                </a>
+                                </label>
+                        </div>
+                        <div class="md:col-span-2 text-center">
+                            <button type="submit" class="bg-white text-blue-900 px-8 py-3 rounded font-medium hover:bg-gray-100 transition">
+                                Отправить заявку
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Контакты -->
+        <section id="contacts" class="py-12 bg-white scroll-mt-[110px]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Контакты</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Адрес</h3>
+                            <p class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-700 mr-2 mt-1"></i>
+                                <span>г. Москва, ул. Металлургов, 15, офис 204</span>
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Телефоны</h3>
+                            <p class="flex items-center mb-1">
+                                <i class="fas fa-phone-alt text-blue-700 mr-2"></i>
+                                <span>+7 (927) 775-57-22</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-700 mr-2"></i>
+                                <span>+7 (905) 305-98-77</span>
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Email</h3>
+                            <p class="flex items-center">
+                                <i class="fas fa-envelope text-blue-700 mr-2"></i>
+                                <span>info@metalltrubprom.ru</span>
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Режим работы</h3>
+                            <p class="flex items-start">
+                                <i class="fas fa-clock text-blue-700 mr-2 mt-1"></i>
+                                <span>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 15:00<br>Вс: выходной</span>
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-xl font-semibold mb-4">Мы в соцсетях</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://t.me/mix931_sites" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                                <a href="https://t.me/mix931_sites" class="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://t.me/mix931_sites" class="bg-green-600 text-white p-3 rounded-full hover:bg-green-700 transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карта -->
+                    <div class="bg-gray-200 rounded-lg overflow-hidden h-96">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4aa95e5529233105c588b00ba2e4d344c52ec683efcfefdc77cfca15a3187503&amp;source=constructor"
+                            width="100%" height="100%" frameborder="0" style="border:0; min-height: 100%; min-width: 100%; display:block;"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Реквизиты компании</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p><span class="font-medium">Наименование:</span> ООО "МеталлТрубПром"</p>
+                            <p><span class="font-medium">ИНН:</span> 1234567890</p>
+                            <p><span class="font-medium">КПП:</span> 123456789</p>
+                        </div>
+                        <div>
+                            <p><span class="font-medium">ОГРН:</span> 1234567890123</p>
+                            <p><span class="font-medium">Расчетный счет:</span> 40702810123456789012</p>
+                            <p><span class="font-medium">Банк:</span> ПАО "Сбербанк"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-700 text-white p-2 rounded mr-3">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">МеталлТрубПром</h3>
+                            <p class="text-xs text-gray-400">Продажа труб и металлопроката</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Более 15 лет на рынке металлопроката. Гарантия качества и лучшие цены.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://t.me/mix931_sites" class="text-gray-400 hover:text-white"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/mix931_sites" class="text-gray-400 hover:text-white"><i class="fab fa-telegram"></i></a>
+                        <a href="https://t.me/mix931_sites" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Продукция</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 1/4</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 3/8</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 1/2</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 5/8</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 3/4</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Метрические трубы</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Компания</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#about_us" class="hover:text-white">О нас</a></li>
+                        <li><a href="index.html#certificates" class="hover:text-white">Сертификаты</a></li>
+                        <li><a href="index.html#contatcs" class="hover:text-white">Реквизиты</a></li>
+                        <li><a href="index.html#reviews" class="hover:text-white">Отзывы</a></li>
+                        <li><a href="index.html#partners" class="hover:text-white">Партнеры</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Информация</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#delivery" class="hover:text-white">Доставка и оплата</a></li>
+                        <li><a href="index.html#montage" class="hover:text-white">О монтаже</a></li>
+                        <li><a href="politika-konfidentsialnosti.html" class="hover:text-white">Политика конфиденциальности</a></li>
+                        <li><a href="polzovatelskoe-soglashenie.html" class="hover:text-white">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="hover:text-white">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 flex justify-center items-center">
+                <p class="text-sm text-gray-400 text-center">© 2025 ООО "МеталлТрубПром". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопки быстрой связи -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        <a href="https://wa.me/79277755722" class="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="https://t.me/mix931" class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition">
+            <i class="fab fa-telegram text-xl"></i>
+        </a>
+        <button id="callback-btn" class="bg-blue-700 text-white p-4 rounded-full shadow-lg hover:bg-blue-800 transition">
+            <i class="fas fa-phone text-xl"></i>
+        </button>
+    </div>
+
+        <!-- Модальное окно обратного звонка (справа снизу кнопка) -->
+    <div id="callback-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Заказать звонок</h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form action="https://formspree.io/f/xpwrzqnj" method="POST">
+                    <!-- Можно добавить скрытое поле subject (не обязательно) -->
+                    <input type="hidden" name="_subject" value="Заявка на обратный звонок с сайта">
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="callback-name">Ваше имя</label>
+                        <input type="text" id="callback-name" name="Имя" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="callback-phone">Телефон</label>
+                        <input type="tel" id="callback-phone" name="Телефон" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="callback-time">Удобное время для звонка</label>
+                        <select id="callback-time" name="Время" class="w-full px-4 py-2 border border-gray-300 rounded">
+                            <option>В любое время</option>
+                            <option>9:00 - 12:00</option>
+                            <option>12:00 - 15:00</option>
+                            <option>15:00 - 18:00</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="agree-callback" class="mr-2" required>
+                        <label for="order-agree" class="text-sm text-gray-600">
+                        Я согласен с <a href="politika-konfidentsialnosti.html" target="_blank" class="text-blue-700 underline">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-700 text-white px-4 py-3 rounded hover:bg-blue-800">
+                        Заказать звонок
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Скрипты -->
+<script>
+    // Мобильное меню
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Выпадающие меню в мобильной версии
+    const mobileProductsBtn = document.getElementById('mobile-products-btn');
+    const mobileProductsMenu = document.getElementById('mobile-products-menu');
+    mobileProductsBtn.addEventListener('click', () => {
+        mobileProductsMenu.classList.toggle('hidden');
+    });
+    const mobileMoreBtn = document.getElementById('mobile-more-btn');
+    const mobileMoreMenu = document.getElementById('mobile-more-menu');
+    mobileMoreBtn.addEventListener('click', () => {
+        mobileMoreMenu.classList.toggle('hidden');
+    });
+
+    // Модальное окно обратного звонка
+    const callbackBtn = document.getElementById('callback-btn');
+    const callbackModal = document.getElementById('callback-modal');
+    const closeModal = document.getElementById('close-modal');
+    callbackBtn.addEventListener('click', () => {
+        callbackModal.classList.remove('hidden');
+    });
+    closeModal.addEventListener('click', () => {
+        callbackModal.classList.add('hidden');
+    });
+    // Закрытие модального окна при клике вне его
+    callbackModal.addEventListener('click', (e) => {
+        if (e.target === callbackModal) {
+            callbackModal.classList.add('hidden');
+        }
+    });
+
+    // Слайдер JS
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dots button');
+        let current = 0;
+        const interval = 10000; // 8 секунд
+        let timer = null;
+
+        function showSlide(idx) {
+            slides.forEach((slide, i) => {
+                if (i === idx) {
+                    slide.classList.add('opacity-100', 'z-10');
+                    slide.classList.remove('opacity-0', 'z-0');
+                } else {
+                    slide.classList.add('opacity-0', 'z-0');
+                    slide.classList.remove('opacity-100', 'z-10');
+                }
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('opacity-100', i === idx);
+                dot.classList.toggle('opacity-50', i !== idx);
+            });
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+
+        timer = setInterval(nextSlide, interval);
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                clearInterval(timer);
+                current = i;
+                showSlide(current);
+                timer = setInterval(nextSlide, interval);
+            });
+        });
+
+        // Первый запуск
+        showSlide(current);
+    });
+
+    // JS для модальных окон у краточек товаров
+        function openPopup(id) {
+            document.getElementById('modal-' + id).classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+        function closePopup(id) {
+            document.getElementById('modal-' + id).classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+        // Закрытие по ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                document.querySelectorAll('[id^="modal-"]').forEach(function(modal) {
+                    modal.classList.add('hidden');
+                });
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+        // Закрытие по клику вне окна (по фону)
+        document.addEventListener('click', function(e) {
+            // Проверяем, клик был по модалке (фону), но не по внутреннему окну
+            if (e.target.dataset.modalBg === "true") {
+                e.target.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+
+        // Скрипт для открытия сертификатов
+        function openCertModal(src) {
+            document.getElementById('certModalImg').src = src;
+            document.getElementById('certModal').classList.remove('hidden');
+        }
+        function closeCertModal(e) {
+            // Закрытие только если клик вне картинки или по кнопке
+            if (
+                e.target.id === 'certModal' || 
+                e.target.closest('button')
+            ) {
+                document.getElementById('certModal').classList.add('hidden');
+                document.getElementById('certModalImg').src = '';
+            }
+        }
+
+        function openOrderPopup() {
+            document.getElementById('orderModal').classList.remove('hidden');
+        }
+        function closeOrderPopup() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        // Закрытие по клику вне окна:
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('orderModal');
+            if (!modal.classList.contains('hidden') && e.target === modal) {
+                closeOrderPopup();
+            }
+        });
+
+
+
+        // Поп ап для кнопки "заказать монтаж"
+        function openOrderPopup() {
+            document.getElementById('orderModal').classList.remove('hidden');
+            document.getElementById('orderForm').reset();
+            document.getElementById('orderFormSuccess').classList.add('hidden');
+        }
+        function closeOrderPopup() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        // Закрытие по клику вне окна:
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('orderModal');
+            if (!modal.classList.contains('hidden') && e.target === modal) {
+                closeOrderPopup();
+            }
+        });
+
+        // Обработка формы:
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('orderForm');
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    if (res.ok) {
+                        form.reset();
+                        document.getElementById('orderFormSuccess').classList.remove('hidden');
+                    } else {
+                        alert('Произошла ошибка. Попробуйте еще раз.');
+                    }
+                } catch {
+                    alert('Произошла ошибка. Попробуйте еще раз.');
+                }
+            });
+        });
+
+</script>
+
+    <!-- Модальное окно для заявки на монтаж -->
+    <div id="orderModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+    <div class="bg-white rounded-xl shadow-xl p-8 max-w-md w-full relative">
+        <!-- Кнопка закрытия -->
+        <button onclick="closeOrderPopup()" class="absolute top-3 right-3 text-gray-500 hover:text-blue-700 text-xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-6 text-blue-900 border-b pb-3">Заказать монтаж</h2>
+        <form id="orderForm" action="https://formspree.io/f/xpwrzqnj" method="POST">
+        <div class="mb-4">
+            <label for="order-name" class="block text-gray-700 font-medium mb-1">Имя</label>
+            <input id="order-name" name="name" type="text" required class="w-full border border-gray-300 rounded px-3 py-2">
+        </div>
+        <div class="mb-4">
+            <label for="order-phone" class="block text-gray-700 font-medium mb-1">Телефон</label>
+            <input id="order-phone" name="phone" type="tel" required class="w-full border border-gray-300 rounded px-3 py-2">
+        </div>
+        <div class="mb-4 flex items-center">
+            <input id="order-agree" type="checkbox" required class="mr-2">
+            <label for="order-agree" class="text-sm text-gray-600">
+            Я согласен с <a href="politika-konfidentsialnosti.html" target="_blank" class="text-blue-700 underline">политикой конфиденциальности</a>
+            </label>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-1">Причина звонка</label>
+            <input type="text" name="reason" value="заказ монтажа" readonly class="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100">
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 font-medium">
+            Отправить заявку
+        </button>
+        </form>
+        <div id="orderFormSuccess" class="hidden text-green-700 font-semibold text-center mt-4">
+        Спасибо! Ваша заявка отправлена.
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

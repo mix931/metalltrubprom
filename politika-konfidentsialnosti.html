@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности – МеталлТрубПром</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+<!-- Шапка сайта -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Верхняя панель с контактами (во всю ширину) -->
+    <div class="bg-blue-900 text-white py-2 hidden md:block w-full">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex space-x-6">
+                <div class="flex items-center">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>+7 (927) 775-57-22</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>info@metalltrubprom.ru</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>г. Москва, ул. Металлургов, 15</span>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://t.me/mix931_sites" class="hover:text-blue-200"><i class="fab fa-whatsapp text-xl"></i></a>
+                <a href="https://t.me/mix931_sites" class="hover:text-blue-200"><i class="fab fa-telegram text-xl"></i></a>
+                <a href="https://t.me/mix931_sites" class="hover:text-blue-200"><i class="fab fa-vk text-xl"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основное меню -->
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
+        <!-- Логотип -->
+        <div class="flex items-center">
+            <div class="bg-blue-700 text-white p-2 rounded mr-3">
+                <i class="fas fa-industry text-2xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-blue-900">МеталлТрубПром</h1>
+                <p class="text-xs text-gray-600">Продажа труб и металлопроката</p>
+            </div>
+        </div>
+
+        <!-- Основное меню для десктопа -->
+        <nav class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="text-blue-900 font-medium hover:text-blue-700">Главная</a>
+
+            <!-- Выпадающее меню "Продукция" -->
+            <div class="relative group">
+                <button class="text-blue-900 font-medium hover:text-blue-700 flex items-center focus:outline-none">
+                    Продукция <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 rounded shadow-lg bg-white py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 1/4</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 3/8</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 1/2</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 5/8</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Трубы D 3/4</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Метрические трубы</a>
+                    <a href="index.html#catalog" class="block px-4 py-2 hover:bg-blue-50">Вспомогательные материалы</a>
+                </div>
+            </div>
+
+            <a href="index.html#montage" class="text-blue-900 font-medium hover:text-blue-700">О монтаже</a>
+            <a href="index.html#certificates" class="text-blue-900 font-medium hover:text-blue-700">Сертификаты</a>
+            <a href="politika-konfidentsialnosti.html" class="text-blue-900 font-medium hover:text-blue-700">Политика конфиденциальности</a>
+            <a href="index.html#contacts" class="text-blue-900 font-medium hover:text-blue-700">Контакты</a>
+
+            <!-- Выпадающее меню "Ещё" -->
+            <div class="relative group">
+                <button class="text-blue-900 font-medium hover:text-blue-700 flex items-center focus:outline-none">
+                    Ещё <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-48 rounded shadow-lg bg-white py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a href="polzovatelskoe-soglashenie.html" class="block px-4 py-2 hover:bg-blue-50">Пользовательское соглашение</a>
+                    <a href="index.html#reviews" class="block px-4 py-2 hover:bg-blue-50">Отзывы</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Кнопки для мобильного меню -->
+        <div class="flex items-center space-x-4 md:hidden">
+            <button id="mobile-menu-button" class="text-blue-900">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-lg absolute w-full left-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <a href="#" class="block py-2 border-b border-gray-200">Главная</a>
+
+            <div class="py-2 border-b border-gray-200">
+                <button id="mobile-products-btn" class="w-full flex justify-between items-center">
+                    <span>Продукция</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="mobile-products-menu" class="hidden pl-4 mt-2">
+                    <a href="index.html#catalog" class="block py-2">Трубы D 1/4</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 3/8</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 1/2</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 5/8</a>
+                    <a href="index.html#catalog" class="block py-2">Трубы D 3/4</a>
+                    <a href="index.html#catalog" class="block py-2">Метрические трубы</a>
+                    <a href="index.html#catalog" class="block py-2">Вспомогательные материалы</a>
+                </div>
+            </div>
+
+            <a href="index.html#montage" class="block py-2 border-b border-gray-200">О монтаже</a>
+            <a href="index.html#certificates" class="block py-2 border-b border-gray-200">Сертификаты</a>
+            <a href="politika-konfidentsialnosti.html" class="block py-2 border-b border-gray-200">Политика конфиденциальности</a>
+
+            <div class="py-2 border-b border-gray-200">
+                <button id="mobile-more-btn" class="w-full flex justify-between items-center">
+                    <span>Ещё</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="mobile-more-menu" class="hidden pl-4 mt-2">
+                    <a href="polzovatelskoe-soglashenie.html" class="block py-2">Пользовательское соглашение</a>
+                    <a href="index.html#reviews" class="block py-2">Отзывы</a>
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://t.me/mix931_sites" class="bg-blue-700 text-white p-2 rounded-full"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://t.me/mix931_sites" class="bg-blue-500 text-white p-2 rounded-full"><i class="fab fa-telegram"></i></a>
+                <a href="tel:+79277755722" class="bg-green-600 text-white p-2 rounded-full"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Основной контент страницы -->
+<main>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="max-w-none text-lg bg-gray-50 border border-blue-100 rounded-xl shadow-sm px-6 py-8 md:px-12 md:py-12">
+                <div class="mb-8 text-center">
+                    <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+                        <i class="fas fa-user-shield text-3xl text-blue-700"></i>
+                    </span>
+                    <h1 class="text-3xl font-bold text-blue-900 mb-2">Политика конфиденциальности</h1>
+                    <p class="text-gray-700 text-base font-medium">Последнее обновление: <span class="text-blue-700">июнь 2025</span></p>
+                </div>
+                <blockquote class="border-l-4 border-blue-600 pl-6 italic text-gray-800 bg-blue-50 py-4 mb-8">
+                    Настоящая Политика конфиденциальности является составной частью Пользовательского соглашения Сайта и действует в отношении всей информации, в том числе персональных данных Пользователя, получаемых Администрацией Сайта в процессе работы Пользователя с Сайтом, исполнения Пользовательского соглашения и соглашений между Администрацией сайта и Пользователем. <br>
+                    <span class="font-semibold text-blue-900">Использование Сайта означает безоговорочное согласие Пользователя с настоящей Политикой конфиденциальности.</span> В случае несогласия с этими условиями Пользователь должен воздержаться от использования Сайта.<br>
+                    <span class="text-gray-600">Перед использованием Сайта Пользователю необходимо внимательно изучить настоящую Политику конфиденциальности.</span>
+                </blockquote>
+
+                <hr class="my-8 border-blue-200">
+
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-700 rounded-full p-2 mr-3">
+                            <i class="fas fa-id-card-alt"></i>
+                        </span>
+                        <h2 class="text-2xl font-semibold text-blue-900">Персональные данные</h2>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-800 mb-6">
+                        <li>Предоставляя свои персональные данные (регистрация, заказ, подписка и т.д.), Пользователь выражает согласие на их обработку в соответствии с Федеральным законом <span class="font-semibold">“О персональных данных” от 27.07.2006 №152-ФЗ</span>.</li>
+                        <li>Данные обрабатываются для исполнения Пользовательского соглашения и иных соглашений между Пользователем и Администрацией сайта.</li>
+                        <li>Обработка данных производится исключительно на территории Российской Федерации в соответствии с действующим законодательством.</li>
+                        <li>Согласие на обработку действует в течение срока исполнения обязательств между Пользователем и Администрацией сайта.</li>
+                        <li>При отзыве согласия Пользователь уведомляет Администрацию письменно или по email. После этого данные удаляются.</li>
+                        <li>Сайт не является оператором персональных данных. Передача данных третьим лицам возможна только в случаях, прямо указанных в данной политике.</li>
+                    </ul>
+                </div>
+
+                <hr class="my-8 border-blue-200">
+
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-700 rounded-full p-2 mr-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </span>
+                        <h2 class="text-2xl font-semibold text-blue-900">Меры по защите персональных данных</h2>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-gray-800 mb-6">
+                        <li>Вся деятельность строится на основе закона “О персональных данных” №152-ФЗ.</li>
+                        <li>Применяются <span class="font-semibold text-blue-800">физические, технические и административные меры</span> для защиты данных от потери, несанкционированного доступа, изменения или распространения.</li>
+                        <li>Меры безопасности включают межсетевой экран, шифрование, контроль физического доступа, разграничение прав доступа.</li>
+                        <li>Администрация сайта соблюдает все права субъектов персональных данных.</li>
+                    </ul>
+                </div>
+
+                <hr class="my-8 border-blue-200">
+
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-700 rounded-full p-2 mr-3">
+                            <i class="fas fa-edit"></i>
+                        </span>
+                        <h2 class="text-2xl font-semibold text-blue-900">Изменение политики конфиденциальности</h2>
+                    </div>
+                    <p class="mb-2 text-gray-800">
+                        Администрация сайта вправе вносить изменения в Политику конфиденциальности без предварительного уведомления Пользователя.
+                    </p>
+                    <p class="text-gray-600 italic">
+                        Актуальная версия политики всегда размещается на данной странице.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-700 text-white p-2 rounded mr-3">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">МеталлТрубПром</h3>
+                            <p class="text-xs text-gray-400">Продажа труб и металлопроката</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">Более 15 лет на рынке металлопроката. Гарантия качества и лучшие цены.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://t.me/mix931_sites" class="text-gray-400 hover:text-white"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me/mix931_sites" class="text-gray-400 hover:text-white"><i class="fab fa-telegram"></i></a>
+                        <a href="https://t.me/mix931_sites" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Продукция</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 1/4</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 3/8</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 1/2</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 5/8</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Трубы D 3/4</a></li>
+                        <li><a href="index.html#catalog" class="hover:text-white">Метрические трубы</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Компания</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#about_us" class="hover:text-white">О нас</a></li>
+                        <li><a href="index.html#certificates" class="hover:text-white">Сертификаты</a></li>
+                        <li><a href="index.html#contatcs" class="hover:text-white">Реквизиты</a></li>
+                        <li><a href="index.html#reviews" class="hover:text-white">Отзывы</a></li>
+                        <li><a href="index.html#partners" class="hover:text-white">Партнеры</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Информация</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#delivery" class="hover:text-white">Доставка и оплата</a></li>
+                        <li><a href="index.html#montage" class="hover:text-white">О монтаже</a></li>
+                        <li><a href="politika-konfidentsialnosti.html" class="hover:text-white">Политика конфиденциальности</a></li>
+                        <li><a href="polzovatelskoe-soglashenie.html" class="hover:text-white">Пользовательское соглашение</a></li>
+                        <li><a href="#" class="hover:text-white">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 flex justify-center items-center">
+                <p class="text-sm text-gray-400 text-center">© 2025 ООО "МеталлТрубПром". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Кнопки быстрой связи -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        <a href="https://wa.me/79277755722" class="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="https://t.me/mix931" class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition">
+            <i class="fab fa-telegram text-xl"></i>
+        </a>
+        <button id="callback-btn" class="bg-blue-700 text-white p-4 rounded-full shadow-lg hover:bg-blue-800 transition">
+            <i class="fas fa-phone text-xl"></i>
+        </button>
+    </div>
+
+        <!-- Модальное окно обратного звонка (справа снизу кнопка) -->
+    <div id="callback-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Заказать звонок</h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form action="https://formspree.io/f/xpwrzqnj" method="POST">
+                    <!-- Можно добавить скрытое поле subject (не обязательно) -->
+                    <input type="hidden" name="_subject" value="Заявка на обратный звонок с сайта">
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="callback-name">Ваше имя</label>
+                        <input type="text" id="callback-name" name="Имя" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="callback-phone">Телефон</label>
+                        <input type="tel" id="callback-phone" name="Телефон" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="callback-time">Удобное время для звонка</label>
+                        <select id="callback-time" name="Время" class="w-full px-4 py-2 border border-gray-300 rounded">
+                            <option>В любое время</option>
+                            <option>9:00 - 12:00</option>
+                            <option>12:00 - 15:00</option>
+                            <option>15:00 - 18:00</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="agree-callback" class="mr-2" required>
+                        <label for="order-agree" class="text-sm text-gray-600">
+                        Я согласен с <a href="politika-konfidentsialnosti.html" target="_blank" class="text-blue-700 underline">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-700 text-white px-4 py-3 rounded hover:bg-blue-800">
+                        Заказать звонок
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- Скрипты -->
+<script>
+    // Мобильное меню
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Выпадающие меню в мобильной версии
+    const mobileProductsBtn = document.getElementById('mobile-products-btn');
+    const mobileProductsMenu = document.getElementById('mobile-products-menu');
+    mobileProductsBtn.addEventListener('click', () => {
+        mobileProductsMenu.classList.toggle('hidden');
+    });
+    const mobileMoreBtn = document.getElementById('mobile-more-btn');
+    const mobileMoreMenu = document.getElementById('mobile-more-menu');
+    mobileMoreBtn.addEventListener('click', () => {
+        mobileMoreMenu.classList.toggle('hidden');
+    });
+
+    // Модальное окно обратного звонка
+    const callbackBtn = document.getElementById('callback-btn');
+    const callbackModal = document.getElementById('callback-modal');
+    const closeModal = document.getElementById('close-modal');
+    callbackBtn.addEventListener('click', () => {
+        callbackModal.classList.remove('hidden');
+    });
+    closeModal.addEventListener('click', () => {
+        callbackModal.classList.add('hidden');
+    });
+    // Закрытие модального окна при клике вне его
+    callbackModal.addEventListener('click', (e) => {
+        if (e.target === callbackModal) {
+            callbackModal.classList.add('hidden');
+        }
+    });
+
+    // Слайдер JS
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dots button');
+        let current = 0;
+        const interval = 10000; // 8 секунд
+        let timer = null;
+
+        function showSlide(idx) {
+            slides.forEach((slide, i) => {
+                if (i === idx) {
+                    slide.classList.add('opacity-100', 'z-10');
+                    slide.classList.remove('opacity-0', 'z-0');
+                } else {
+                    slide.classList.add('opacity-0', 'z-0');
+                    slide.classList.remove('opacity-100', 'z-10');
+                }
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('opacity-100', i === idx);
+                dot.classList.toggle('opacity-50', i !== idx);
+            });
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+
+        timer = setInterval(nextSlide, interval);
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                clearInterval(timer);
+                current = i;
+                showSlide(current);
+                timer = setInterval(nextSlide, interval);
+            });
+        });
+
+        // Первый запуск
+        showSlide(current);
+    });
+
+    // JS для модальных окон у краточек товаров
+        function openPopup(id) {
+            document.getElementById('modal-' + id).classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+        function closePopup(id) {
+            document.getElementById('modal-' + id).classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+        // Закрытие по ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                document.querySelectorAll('[id^="modal-"]').forEach(function(modal) {
+                    modal.classList.add('hidden');
+                });
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+        // Закрытие по клику вне окна (по фону)
+        document.addEventListener('click', function(e) {
+            // Проверяем, клик был по модалке (фону), но не по внутреннему окну
+            if (e.target.dataset.modalBg === "true") {
+                e.target.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+
+        // Скрипт для открытия сертификатов
+        function openCertModal(src) {
+            document.getElementById('certModalImg').src = src;
+            document.getElementById('certModal').classList.remove('hidden');
+        }
+        function closeCertModal(e) {
+            // Закрытие только если клик вне картинки или по кнопке
+            if (
+                e.target.id === 'certModal' || 
+                e.target.closest('button')
+            ) {
+                document.getElementById('certModal').classList.add('hidden');
+                document.getElementById('certModalImg').src = '';
+            }
+        }
+
+</script>
+
+</body>
+</html>
